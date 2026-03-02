@@ -305,97 +305,141 @@
   </main>
 
   <!-- Main Birthday Card Section -->
-  <main id="mainCard" class="mx-auto grid min-h-screen w-full max-w-7xl place-items-center px-4 py-10">
+  <main id="mainCard" class="mx-auto w-full max-w-6xl px-4 py-10">
     <section id="card"
-      class="arena-shell w-full overflow-hidden rounded-3xl border border-cyan-300/30 p-5 shadow-[0_0_0_1px_rgba(125,211,252,.25),0_24px_84px_rgba(2,6,23,.88)] backdrop-blur md:p-8">
-      <div class="grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
+      class="arena-shell w-full overflow-hidden rounded-3xl border border-cyan-300/30 p-4 shadow-[0_0_0_1px_rgba(125,211,252,.25),0_24px_60px_rgba(2,6,23,.75)] backdrop-blur md:p-6">
+
+      <div class="grid gap-6 lg:grid-cols-[1.05fr_.95fr]">
+
+        <!-- LEFT SIDE -->
         <div>
           <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/logo.png" alt="Marvel Rivals"
-            class="h-10 w-auto object-contain brightness-110" />
+            class="h-8 w-auto object-contain brightness-110" />
+
           <p
             class="mt-3 inline-flex rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">
-            Marvel Rivals Birthday Event</p>
-          <h2 class="mt-4 font-title text-7xl leading-[0.85] sm:text-8xl">YO LEAF <span
-              class="block text-rivalsRed drop-shadow-[0_0_20px_rgba(255,51,95,.5)]">HAPPY</span> <span
-              class="block text-rivalsBlue drop-shadow-[0_0_20px_rgba(24,219,255,.55)]">BIRTHDAY</span></h2>
-          <p class="mt-4 max-w-2xl text-sm text-slate-200 sm:text-base">This isn't a formal card. This is your squad
-            hyping you up. Leaf, you're the main character today, no arguments.</p>
+            Marvel Rivals Birthday Event
+          </p>
 
-          <div class="mt-6 grid gap-3 sm:grid-cols-3">
+          <!-- Reduced Title Size -->
+          <h2 class="mt-3 font-title text-4xl leading-tight sm:text-5xl">
+            YO LEAF
+            <span class="block text-rivalsRed drop-shadow-[0_0_15px_rgba(255,51,95,.4)]">
+              HAPPY
+            </span>
+            <span class="block text-rivalsBlue drop-shadow-[0_0_15px_rgba(24,219,255,.4)]">
+              BIRTHDAY
+            </span>
+          </h2>
+
+          <p class="mt-4 max-w-xl text-sm text-slate-200">
+            This isn't a formal card. This is your squad hyping you up.
+            Leaf, you're the main character today, no arguments.
+          </p>
+
+          <!-- Stat Cards -->
+          <div class="mt-6 grid gap-4 sm:grid-cols-3">
             <div class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-3">
-              <p class="text-[10px] uppercase tracking-[.16em] text-cyan-200">Birthday MVP</p>
+              <p class="text-[10px] uppercase tracking-[.16em] text-cyan-200">
+                Birthday MVP
+              </p>
               <p class="mt-1 text-lg font-extrabold">LEAF</p>
             </div>
+
             <div class="rounded-xl border border-rose-300/30 bg-slate-950/55 p-3">
-              <p class="text-[10px] uppercase tracking-[.16em] text-rose-200">Power Level</p>
-              <p id="powerText" class="mt-1 text-lg font-extrabold">13,337+</p>
+              <p class="text-[10px] uppercase tracking-[.16em] text-rose-200">
+                Power Level
+              </p>
+              <p id="powerText" class="mt-1 text-lg font-extrabold">
+                13,337+
+              </p>
             </div>
+
             <div class="rounded-xl border border-amber-300/30 bg-slate-950/55 p-3">
-              <p class="text-[10px] uppercase tracking-[.16em] text-amber-200">Mood</p>
+              <p class="text-[10px] uppercase tracking-[.16em] text-amber-200">
+                Mood
+              </p>
               <p class="mt-1 text-lg font-extrabold">Cake + Chaos</p>
             </div>
           </div>
 
-          <div class="mt-8 flex flex-wrap gap-3">
+          <!-- Buttons -->
+          <div class="mt-6 flex flex-wrap gap-3">
             <button id="ultWish"
-              class="ult-btn rounded-xl px-5 py-3 text-xs font-bold uppercase tracking-wide text-white hover:scale-[1.03]">Moon
-              Knight Ultimate</button>
+              class="rounded-xl bg-rose-500 px-4 py-2 text-xs font-bold uppercase tracking-wide text-white transition hover:scale-105">
+              Moon Knight Ultimate
+            </button>
+
             <button id="partyDrop"
-              class="rounded-xl border border-cyan-300/60 bg-cyan-400/10 px-5 py-3 text-xs font-bold uppercase tracking-wide text-cyan-100 transition hover:scale-[1.03]">Birthday
-              Wishes</button>
+              class="rounded-xl border border-cyan-300/60 bg-cyan-400/10 px-4 py-2 text-xs font-bold uppercase tracking-wide text-cyan-100 transition hover:scale-105">
+              Birthday Wishes
+            </button>
           </div>
 
           <div id="messageBox"
-            class="mt-5 rounded-xl border border-cyan-300/40 bg-slate-950/55 p-4 text-sm text-slate-100">Tap a button.
-            Your squad has birthday lines waiting.</div>
+            class="mt-6 rounded-xl border border-cyan-300/40 bg-slate-950/55 p-4 text-sm text-slate-100">
+            Tap a button. Your squad has birthday lines waiting.
+          </div>
         </div>
 
+        <!-- RIGHT SIDE -->
         <aside class="rounded-2xl border border-white/10 bg-slate-900/55 p-4">
-          <div class="mb-3 flex items-center justify-between">
-            <p class="text-xs font-bold uppercase tracking-[.2em] text-cyan-200">Rivals Squad</p>
-            <p class="text-[10px] text-slate-300">Map Theme Active</p>
+          <div class="mb-4 flex items-center justify-between">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-cyan-200">
+              Rivals Squad
+            </p>
+            <p class="text-[10px] text-slate-300">
+              Map Theme Active
+            </p>
           </div>
 
-          <div class="grid gap-3 sm:grid-cols-2">
-            <span class="char-wrap"><span class="char-pop">Web-Swing Pop</span>
-              <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2"><img class="char-photo"
-                  src="Marvel rivals' Spider-Man pfp.jpg" alt="Spider-Man Marvel Rivals" referrerpolicy="no-referrer" />
-                <p class="mt-2 text-xs font-bold text-cyan-100">Spider-Man</p>
-              </article>
-            </span>
-            <span class="char-wrap"><span class="char-pop">Arc Reactor Burst</span>
-              <article class="rounded-xl border border-rose-200/25 bg-slate-950/55 p-2"><img class="char-photo"
-                  src="download.jpg" alt="Iron Man Marvel Rivals" referrerpolicy="no-referrer" />
-                <p class="mt-2 text-xs font-bold text-rose-100">Iron Man</p>
-              </article>
-            </span>
-            <span class="char-wrap"><span class="char-pop">Frostbeat Pop</span>
-              <article class="rounded-xl border border-violet-200/25 bg-slate-950/55 p-2"><img class="char-photo"
-                  src="download (1).jpg" referrerpolicy="no-referrer" />
-                <p class="mt-2 text-xs font-bold text-violet-100">Luna Snow</p>
-              </article>
-            </span>
-            <span class="char-wrap"><span class="char-pop">Sharky Splash</span>
-              <article class="rounded-xl border border-emerald-200/25 bg-slate-950/55 p-2"><img class="char-photo"
-                  src="Marvel Rivals Jeff Default _ Base skin.jpg" alt="Jeff the Land Shark Marvel Rivals"
-                  referrerpolicy="no-referrer" />
-                <p class="mt-2 text-xs font-bold text-emerald-100">Jeff the Land Shark</p>
-              </article>
-            </span>
-            <span class="char-wrap"><span class="char-pop">Mischief Mode</span>
-              <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2"><img class="char-photo"
-                  src="loki.jpg" alt="Loki" referrerpolicy="no-referrer" />
-                <p class="mt-2 text-xs font-bold text-cyan-100">Loki</p>
-              </article>
-            </span>
-            <span class="char-wrap"><span class="char-pop">Chaos Pop</span>
-              <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2"><img class="char-photo"
-                  src="Scarlet Witch Icon.jpg" alt="Scarlet Witch" referrerpolicy="no-referrer" />
-                <p class="mt-2 text-xs font-bold text-cyan-100">Scarlet Witch</p>
-              </article>
-            </span>
+          <div class="grid gap-4 sm:grid-cols-2">
+
+            <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2">
+              <img class="char-photo" src="Marvel rivals' Spider-Man pfp.jpg" alt="Spider-Man" />
+              <p class="mt-2 text-xs font-bold text-cyan-100">
+                Spider-Man
+              </p>
+            </article>
+
+            <article class="rounded-xl border border-rose-200/25 bg-slate-950/55 p-2">
+              <img class="char-photo" src="download.jpg" alt="Iron Man" />
+              <p class="mt-2 text-xs font-bold text-rose-100">
+                Iron Man
+              </p>
+            </article>
+
+            <article class="rounded-xl border border-violet-200/25 bg-slate-950/55 p-2">
+              <img class="char-photo" src="download (1).jpg" />
+              <p class="mt-2 text-xs font-bold text-violet-100">
+                Luna Snow
+              </p>
+            </article>
+
+            <article class="rounded-xl border border-emerald-200/25 bg-slate-950/55 p-2">
+              <img class="char-photo" src="Marvel Rivals Jeff Default _ Base skin.jpg" alt="Jeff the Land Shark" />
+              <p class="mt-2 text-xs font-bold text-emerald-100">
+                Jeff the Land Shark
+              </p>
+            </article>
+
+            <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2">
+              <img class="char-photo" src="loki.jpg" alt="Loki" />
+              <p class="mt-2 text-xs font-bold text-cyan-100">
+                Loki
+              </p>
+            </article>
+
+            <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2">
+              <img class="char-photo" src="Scarlet Witch Icon.jpg" alt="Scarlet Witch" />
+              <p class="mt-2 text-xs font-bold text-cyan-100">
+                Scarlet Witch
+              </p>
+            </article>
+
           </div>
         </aside>
+
       </div>
     </section>
   </main>
