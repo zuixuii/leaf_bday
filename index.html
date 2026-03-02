@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaf's Marvel Rivals Birthday Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            title: ["Bebas Neue", "sans-serif"],
+            body: ["Barlow", "sans-serif"],
+          },
+          colors: {
+            rivalsRed: "#ff335f",
+            rivalsBlue: "#18dbff",
+          },
+          keyframes: {
+            popIn: {
+              "0%": {
+                opacity: "0",
+                transform: "translateY(14px) scale(0.98)",
+              },
+              "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
+            },
+            pulseSoft: {
+              "0%,100%": { opacity: ".35" },
+              "50%": { opacity: ".8" },
+            },
+            shake: {
+              "0%,100%": { transform: "translateX(0)" },
+              "25%": { transform: "translateX(-4px)" },
+              "75%": { transform: "translateX(4px)" },
+            },
+          },
+          animation: {
+            popIn: "popIn .7s cubic-bezier(.2,.8,.2,1)",
+            pulseSoft: "pulseSoft 2.8s ease-in-out infinite",
+            shake: "shake .28s linear",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      background:
+        url("mkkk.jpg"),
+        url("mkkk.jpg"),
+        radial-gradient(circle at 14% 14%,
+          rgba(255, 51, 95, 0.2),
+          transparent 34%),
+        radial-gradient(circle at 86% 78%,
+          rgba(24, 219, 255, 0.17),
+          transparent 38%),
+        linear-gradient(135deg, #020612, #0a1835 56%, #081329);
+      background-size: cover, cover, auto, auto, auto;
+      background-position:
+        center top,
+        center top,
+        center,
+        center,
+        center;
+      background-blend-mode: soft-light, overlay, normal, normal, normal;
+      overflow-x: hidden;
+    }
+
+    .arena-shell {
+      position: relative;
+      isolation: isolate;
+    }
+
+    .arena-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background-image: url("https://static.wikia.nocookie.net/marvel-rivals/images/6/68/Map_Royal_Palace_3d_view_01.jpg/revision/latest?cb=20241208204049");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.38;
+      filter: saturate(1.1) contrast(1.05);
+    }
+
+    .arena-shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(110deg,
+          rgba(2, 6, 22, 0.9) 22%,
+          rgba(3, 12, 32, 0.58) 65%,
+          rgba(2, 8, 24, 0.92) 100%),
+        repeating-linear-gradient(to bottom,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.03) 1px,
+          transparent 2px,
+          transparent 6px);
+    }
+
+    .char-photo {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(8, 20, 45, 0.7);
+    }
+
+    .char-wrap {
+      position: relative;
+      display: block;
+      transition: transform 220ms ease;
+    }
+
+    .char-wrap:hover {
+      transform: translateY(-6px) scale(1.02);
+    }
+
+    .char-wrap article {
+      transition: border-color 220ms ease, box-shadow 220ms ease;
+    }
+
+    .char-wrap:hover article {
+      border-color: rgba(34, 211, 238, 0.65);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    .char-pop {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 3;
+      border-radius: 999px;
+      border: 1px solid rgba(34, 211, 238, 0.6);
+      background: rgba(8, 17, 38, 0.82);
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #cffafe;
+      opacity: 0;
+      transform: translateY(8px) scale(0.96);
+      transition: opacity 220ms ease, transform 220ms ease;
+      pointer-events: none;
+    }
+
+    .char-wrap:hover .char-pop {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .ult-btn {
+      background: linear-gradient(150deg, #01275d, #680101);
+      box-shadow: 0 10px 26px rgba(10, 22, 42, 0.45);
+      transition: transform 180ms ease, box-shadow 220ms ease, filter 220ms ease;
+    }
+
+    .ult-btn:hover {
+      box-shadow: 0 0 0 1px rgba(79, 140, 255, 0.4), 0 0 18px rgba(79, 140, 255, 0.35), 0 0 26px rgba(169, 54, 116, 0.28);
+      filter: brightness(1.08);
+    }
+
+    #ultimate-root {
+      position: fixed;
+      inset: 0;
+      z-index: 95;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .mk-ult-wave {
+      position: absolute;
+      inset: 0;
+    }
+
+    .mk-ult-column {
+      position: absolute;
+      top: -130vh;
+      width: clamp(4px, 0.5vw, 9px);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(224, 242, 254, 0.98), rgba(148, 228, 255, 0.95), rgba(56, 189, 248, 0.7), rgba(10, 18, 42, 0));
+      box-shadow: 0 0 18px rgba(186, 230, 253, 0.85), 0 0 34px rgba(56, 189, 248, 0.55);
+      animation: mk-vertical-strike 880ms cubic-bezier(.18, .74, .24, 1) forwards;
+    }
+
+    .mk-ult-flash {
+      position: absolute;
+      top: -5vh;
+      height: 110vh;
+      width: clamp(90px, 16vw, 280px);
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, rgba(224, 242, 254, 0.95), rgba(125, 211, 252, 0.45), rgba(2, 6, 22, 0));
+      filter: blur(4px);
+      opacity: 0;
+      animation: mk-vertical-flash 700ms ease-out forwards;
+    }
+
+    .mk-ult-sigil {
+      position: absolute;
+      bottom: 5vh;
+      width: clamp(120px, 21vw, 340px);
+      aspect-ratio: 1 / 1;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      border: 1px solid rgba(186, 230, 253, 0.9);
+      box-shadow: inset 0 0 24px rgba(224, 242, 254, 0.45), 0 0 30px rgba(56, 189, 248, 0.5);
+      background: radial-gradient(circle at center, rgba(224, 242, 254, 0.36), rgba(56, 189, 248, 0.1) 45%, rgba(2, 6, 22, 0) 72%);
+      opacity: 0;
+      animation: mk-sigil-pulse 760ms ease-out forwards;
+    }
+
+    @keyframes mk-vertical-strike {
+      0% {
+        transform: translateY(-26vh) scaleY(0.24);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(150vh) scaleY(1.22);
+        opacity: 0;
+      }
+    }
+
+    @keyframes mk-vertical-flash {
+      0% {
+        opacity: 0;
+      }
+
+      30% {
+        opacity: 0.85;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes mk-sigil-pulse {
+      0% {
+        transform: translateX(-50%) scale(0.45);
+        opacity: 0;
+      }
+
+      35% {
+        transform: translateX(-50%) scale(1.06);
+        opacity: 0.95;
+      }
+
+      100% {
+        transform: translateX(-50%) scale(1.24);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="font-body text-slate-100">
+  <div class="fixed -left-24 -top-24 h-80 w-80 rounded-full bg-rivalsRed/25 blur-3xl animate-pulseSoft"></div>
+  <div class="fixed -bottom-24 -right-20 h-80 w-80 rounded-full bg-rivalsBlue/20 blur-3xl animate-pulseSoft"></div>
+
+  <main class="mx-auto grid min-h-screen w-full max-w-7xl place-items-center px-4 py-10">
+    <section id="card"
+      class="arena-shell w-full overflow-hidden rounded-3xl border border-cyan-300/30 p-5 shadow-[0_0_0_1px_rgba(125,211,252,.25),0_24px_84px_rgba(2,6,23,.88)] backdrop-blur md:p-8">
+      <div class="grid gap-8 lg:grid-cols-[1.05fr_.95fr]">
+        <div>
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/logo.png" alt="Marvel Rivals"
+            class="h-10 w-auto object-contain brightness-110" />
+          <p
+            class="mt-3 inline-flex rounded-full border border-cyan-300/40 bg-cyan-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">
+            Marvel Rivals Birthday Event</p>
+          <h2 class="mt-4 font-title text-7xl leading-[0.85] sm:text-8xl">YO LEAF <span
+              class="block text-rivalsRed drop-shadow-[0_0_20px_rgba(255,51,95,.5)]">HAPPY</span> <span
+              class="block text-rivalsBlue drop-shadow-[0_0_20px_rgba(24,219,255,.55)]">BIRTHDAY</span></h2>
+          <p class="mt-4 max-w-2xl text-sm text-slate-200 sm:text-base">This isn't a formal card. This is your squad
+            hyping you up. Leaf, you're the main character today, no arguments.</p>
+
+          <div class="mt-6 grid gap-3 sm:grid-cols-3">
+            <div class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-3">
+              <p class="text-[10px] uppercase tracking-[.16em] text-cyan-200">Birthday MVP</p>
+              <p class="mt-1 text-lg font-extrabold">LEAF</p>
+            </div>
+            <div class="rounded-xl border border-rose-300/30 bg-slate-950/55 p-3">
+              <p class="text-[10px] uppercase tracking-[.16em] text-rose-200">Power Level</p>
+              <p id="powerText" class="mt-1 text-lg font-extrabold">13,337+</p>
+            </div>
+            <div class="rounded-xl border border-amber-300/30 bg-slate-950/55 p-3">
+              <p class="text-[10px] uppercase tracking-[.16em] text-amber-200">Mood</p>
+              <p class="mt-1 text-lg font-extrabold">Cake + Chaos</p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button id="ultWish"
+              class="ult-btn rounded-xl px-5 py-3 text-xs font-bold uppercase tracking-wide text-white hover:scale-[1.03]">Moon
+              Knight Ultimate</button>
+            <button id="partyDrop"
+              class="rounded-xl border border-cyan-300/60 bg-cyan-400/10 px-5 py-3 text-xs font-bold uppercase tracking-wide text-cyan-100 transition hover:scale-[1.03]">Birthday
+              Wishes</button>
+          </div>
+
+          <div id="messageBox"
+            class="mt-5 rounded-xl border border-cyan-300/40 bg-slate-950/55 p-4 text-sm text-slate-100">Tap a button.
+            Your squad has birthday lines waiting.</div>
+        </div>
+
+        <aside class="rounded-2xl border border-white/10 bg-slate-900/55 p-4">
+          <div class="mb-3 flex items-center justify-between">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-cyan-200">Rivals Squad</p>
+            <p class="text-[10px] text-slate-300">Map Theme Active</p>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <span class="char-wrap"><span class="char-pop">Web-Swing Pop</span>
+              <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2"><img class="char-photo"
+                  src="Marvel rivals' Spider-Man pfp.jpg" alt="Spider-Man Marvel Rivals" referrerpolicy="no-referrer" />
+                <p class="mt-2 text-xs font-bold text-cyan-100">Spider-Man</p>
+              </article>
+            </span>
+            <span class="char-wrap"><span class="char-pop">Arc Reactor Burst</span>
+              <article class="rounded-xl border border-rose-200/25 bg-slate-950/55 p-2"><img class="char-photo"
+                  src="download.jpg" alt="Iron Man Marvel Rivals" referrerpolicy="no-referrer" />
+                <p class="mt-2 text-xs font-bold text-rose-100">Iron Man</p>
+              </article>
+            </span>
+            <span class="char-wrap"><span class="char-pop">Frostbeat Pop</span>
+              <article class="rounded-xl border border-violet-200/25 bg-slate-950/55 p-2"><img class="char-photo"
+                  src="download (1).jpg" referrerpolicy="no-referrer" />
+                <p class="mt-2 text-xs font-bold text-violet-100">Luna Snow</p>
+              </article>
+            </span>
+            <span class="char-wrap"><span class="char-pop">Sharky Splash</span>
+              <article class="rounded-xl border border-emerald-200/25 bg-slate-950/55 p-2"><img class="char-photo"
+                  src="Marvel Rivals Jeff Default _ Base skin.jpg" alt="Jeff the Land Shark Marvel Rivals"
+                  referrerpolicy="no-referrer" />
+                <p class="mt-2 text-xs font-bold text-emerald-100">Jeff the Land Shark</p>
+              </article>
+            </span>
+            <span class="char-wrap"><span class="char-pop">Mischief Mode</span>
+              <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2"><img class="char-photo"
+                  src="loki.jpg" alt="Loki" referrerpolicy="no-referrer" />
+                <p class="mt-2 text-xs font-bold text-cyan-100">Loki</p>
+              </article>
+            </span>
+            <span class="char-wrap"><span class="char-pop">Chaos Pop</span>
+              <article class="rounded-xl border border-cyan-200/25 bg-slate-950/55 p-2"><img class="char-photo"
+                  src="Scarlet Witch Icon.jpg" alt="Scarlet Witch" referrerpolicy="no-referrer" />
+                <p class="mt-2 text-xs font-bold text-cyan-100">Scarlet Witch</p>
+              </article>
+            </span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <div id="ultimate-root" aria-hidden="true"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <script>
+    const ultimateRoot = document.getElementById("ultimate-root");
+    const ultimateRenderer = ReactDOM.createRoot(ultimateRoot);
+
+    function MoonKnightVerticalUltimateLayer() {
+      const [waves, setWaves] = React.useState([]);
+
+      React.useEffect(() => {
+        const trigger = () => {
+          const waveId = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+          const center = 22 + Math.random() * 56;
+          const columns = Array.from({ length: 16 }, (_, idx) => ({
+            id: `${waveId}-${idx}`,
+            left: Math.max(2, Math.min(98, center + (Math.random() - 0.5) * 30)),
+            delay: Math.floor(Math.random() * 220),
+            duration: 650 + Math.floor(Math.random() * 440),
+            height: 118 + Math.random() * 52,
+            opacity: 0.62 + Math.random() * 0.36,
+            scaleX: 0.7 + Math.random() * 1.25,
+          }));
+          setWaves((prev) => [...prev, { id: waveId, center, columns }]);
+          setTimeout(() => {
+            setWaves((prev) => prev.filter((wave) => wave.id !== waveId));
+          }, 1450);
+        };
+
+        window.triggerVerticalUltimate = trigger;
+        window.addEventListener("mk-ult-trigger", trigger);
+        return () => {
+          window.removeEventListener("mk-ult-trigger", trigger);
+          delete window.triggerVerticalUltimate;
+        };
+      }, []);
+
+      return React.createElement(
+        React.Fragment,
+        null,
+        waves.map((wave) =>
+          React.createElement(
+            "div",
+            { key: wave.id, className: "mk-ult-wave" },
+            [
+              React.createElement("span", {
+                key: `${wave.id}-flash`,
+                className: "mk-ult-flash",
+                style: { left: `${wave.center}%` },
+              }),
+              React.createElement("span", {
+                key: `${wave.id}-sigil`,
+                className: "mk-ult-sigil",
+                style: { left: `${wave.center}%` },
+              }),
+              ...wave.columns.map((column) =>
+                React.createElement("span", {
+                  key: column.id,
+                  className: "mk-ult-column",
+                  style: {
+                    left: `${column.left}%`,
+                    height: `${column.height}vh`,
+                    opacity: column.opacity,
+                    transform: `scaleX(${column.scaleX})`,
+                    animationDelay: `${column.delay}ms`,
+                    animationDuration: `${column.duration}ms`,
+                  },
+                })
+              ),
+            ]
+          )
+        )
+      );
+    }
+
+    ultimateRenderer.render(React.createElement(MoonKnightVerticalUltimateLayer));
+
+    const ultWish = document.getElementById("ultWish");
+    const partyDrop = document.getElementById("partyDrop");
+    const messageBox = document.getElementById("messageBox");
+    const powerText = document.getElementById("powerText");
+    const characterCards = document.querySelectorAll(".char-wrap");
+
+    const ultLines = [
+      "Ultimate online: happy birthday Leaf. You are carrying this timeline today.",
+      "Leaf entered the lobby. Everyone else accepted defeat and started cheering.",
+      "Birthday combo landed. Cake secured. Win screen unlocked.",
+    ];
+
+    const hoverPopAudio = new Audio("pop.mp3");
+    hoverPopAudio.preload = "auto";
+    hoverPopAudio.volume = 0.28;
+
+    function playPopSound() {
+      hoverPopAudio.currentTime = 0;
+      hoverPopAudio.play().catch(() => { });
+    }
+
+    characterCards.forEach((cardItem) => {
+      cardItem.addEventListener("mouseenter", playPopSound);
+    });
+
+    ultWish.addEventListener("click", () => {
+      const line = ultLines[Math.floor(Math.random() * ultLines.length)];
+      const score = 13337 + Math.floor(Math.random() * 9000);
+      powerText.textContent = `${score.toLocaleString()}+`;
+      messageBox.textContent = line;
+      messageBox.style.borderColor = "rgba(255, 51, 95, .85)";
+      window.dispatchEvent(new Event("mk-ult-trigger"));
+    });
+
+    partyDrop.addEventListener("click", () => {
+      window.location.href = "party-drop.html";
+    });
+  </script>
+</body>
+
+</html>

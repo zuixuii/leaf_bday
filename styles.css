@@ -1,0 +1,244 @@
+:root {
+  --bg: #070b16;
+  --card: rgba(8, 15, 32, 0.84);
+  --line: rgba(157, 193, 255, 0.22);
+  --text: #e8f3ff;
+  --muted: #acc3e5;
+  --red: #ff2f5d;
+  --cyan: #16d8ff;
+  --gold: #ffc94a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+span {
+padding: 50px;
+  background-color: green;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+
+}
+span:hover{
+   transform: scale(1.5);
+}
+
+
+body {
+  font-family: "Barlow", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 16% 18%, rgba(255, 47, 93, 0.2), transparent 34%),
+    radial-gradient(circle at 84% 72%, rgba(22, 216, 255, 0.17), transparent 40%),
+    linear-gradient(135deg, #040711 0%, #0d1733 55%, #090f20 100%);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(129, 172, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 172, 255, 0.09) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+  z-index: -3;
+}
+
+.bg-glow {
+  position: fixed;
+  width: 40vmax;
+  height: 40vmax;
+  filter: blur(80px);
+  opacity: 0.35;
+  z-index: -2;
+  animation: drift 10s ease-in-out infinite alternate;
+}
+
+.bg-red {
+  background: var(--red);
+  top: -10vmax;
+  left: -8vmax;
+}
+
+.bg-cyan {
+  background: var(--cyan);
+  bottom: -10vmax;
+  right: -8vmax;
+  animation-delay: 1.7s;
+}
+
+.card {
+  width: min(920px, 100%);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: 0 20px 65px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  padding: clamp(24px, 4vw, 44px);
+  position: relative;
+  backdrop-filter: blur(4px);
+  animation: card-in 850ms cubic-bezier(.2,.75,.2,1);
+}
+
+.tag {
+  margin: 0;
+  color: var(--cyan);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 8px 0 12px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.8rem, 10vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+
+h1 span {
+  color: var(--red);
+  text-shadow: 0 0 26px rgba(255, 47, 93, 0.6);
+}
+
+.lead {
+  margin: 0 0 24px;
+  color: var(--muted);
+  max-width: 66ch;
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  border: 1px solid rgba(145, 187, 255, 0.24);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(11, 21, 44, 0.62);
+}
+
+.stat h2 {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.stat p {
+  margin: 8px 0 0;
+  font-size: clamp(1.05rem, 2.6vw, 1.55rem);
+  font-weight: 800;
+}
+
+.actions {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 18px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.97rem;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.primary {
+  background: linear-gradient(125deg, #0b1f3b, #4a0f1f);
+  box-shadow: 0 10px 26px rgba(10, 22, 42, 0.45);
+}
+
+.primary:hover {
+  box-shadow: 0 0 0 1px rgba(79, 140, 255, 0.4), 0 0 18px rgba(79, 140, 255, 0.35), 0 0 26px rgba(169, 54, 116, 0.28);
+  filter: brightness(1.08);
+}
+
+.ghost {
+  background: rgba(22, 216, 255, 0.12);
+  border: 1px solid rgba(22, 216, 255, 0.5);
+}
+
+.result {
+  margin-top: 18px;
+  border: 1px solid rgba(22, 216, 255, 0.28);
+  background: rgba(4, 15, 36, 0.72);
+  border-radius: 14px;
+  padding: 15px;
+  min-height: 72px;
+}
+
+.result p {
+  margin: 0;
+}
+
+.burst {
+  animation: burst 350ms ease;
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(30px, -26px);
+  }
+}
+
+@keyframes burst {
+  0% { transform: scale(0.98); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 760px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

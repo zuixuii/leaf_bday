@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Party Drop | For Leaf</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Barlow", sans-serif;
+      min-height: 100vh;
+      background:
+        url("https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/library_hero.jpg"),
+        url("https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/page_bg_generated_v6b.jpg?t=1732710182"),
+        radial-gradient(circle at 12% 10%, rgba(255, 51, 95, 0.22), transparent 30%),
+        radial-gradient(circle at 88% 80%, rgba(24, 219, 255, 0.2), transparent 34%),
+        linear-gradient(140deg, #020612, #0a1734 55%, #071125);
+      background-size: cover, cover, auto, auto, auto;
+      background-position: center top, center top, center, center, center;
+      background-blend-mode: soft-light, overlay, normal, normal, normal;
+      background-attachment: fixed;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+    }
+
+    .accordion-content.open {
+      max-height: 400px;
+    }
+  </style>
+</head>
+
+<body class="text-slate-100">
+  <main class="mx-auto max-w-5xl px-4 py-10">
+    <a href="index.html"
+      class="inline-flex items-center rounded-lg border border-cyan-300/40 bg-cyan-300/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-cyan-200">Back</a>
+
+    <section
+      class="mt-4 rounded-3xl border border-cyan-300/30 bg-slate-900/70 p-6 shadow-[0_0_0_1px_rgba(125,211,252,.25),0_24px_84px_rgba(2,6,23,.88)] backdrop-blur md:p-10">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/logo.png" alt="Marvel Rivals"
+        class="h-10 w-auto object-contain brightness-110" />
+      <p class="text-xs font-bold uppercase tracking-[0.2em] text-cyan-200">Open Party Drop</p>
+      <h1 class="mt-2 font-['Bebas_Neue'] text-7xl leading-[0.85] text-white sm:text-8xl">
+        SPECIAL WISHES
+        <span class="block text-cyan-300">FOR LEAF</span>
+      </h1>
+
+      <!-- Accordion -->
+      <div class="mt-4 space-y-2" id="wishes-accordion">
+
+        <!-- ZUI -->
+        <div class="accordion-item rounded-lg border border-cyan-300/30 bg-slate-800/60 overflow-hidden">
+          <button
+            class="accordion-header w-full flex items-center justify-between p-2 px-3 text-left hover:bg-slate-700/50 transition-colors"
+            onclick="toggleAccordion(this)">
+            <span class="text-base font-bold text-cyan-200">ZUI</span>
+            <svg class="accordion-icon w-4 h-4 text-cyan-300 transition-transform duration-300" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="accordion-content">
+            <div class="grid grid-cols-1 md:grid-cols-[380px_1fr] pb-3 pt-5">
+              <div style="height:300px;width:300px"
+                class="ml-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center border border-cyan-300/30">
+                <span class="text-2xl"><img src="leaf.1.gif" alt=""></span>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm text-slate-200">
+                  Happiest birthday leafuu , dekho merko bday cards likhna nai aata
+                  isliye mane website bana di T-T ,
+                  so yeah happiest birthday to you and hamko party dena &lt;3 TYSM hehe
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Guri -->
+        <div class="accordion-item rounded-lg border border-cyan-300/30 bg-slate-800/60 overflow-hidden">
+          <button
+            class="accordion-header w-full flex items-center justify-between p-2 px-3 text-left hover:bg-slate-700/50 transition-colors"
+            onclick="toggleAccordion(this)">
+            <span class="text-base font-bold text-cyan-200">Guri</span>
+            <svg class="accordion-icon w-4 h-4 text-cyan-300 transition-transform duration-300" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="accordion-content">
+            <div class="grid grid-cols-1 md:grid-cols-[380px_1fr] pb-3 pt-5">
+              <div style="height:300px;width:300px"
+                class="ml-10 rounded-lg bg-gradient-to-br from-pink-500/20 to-red-500/20 flex items-center justify-center border border-cyan-300/30">
+                <span class="text-2xl"><img src="leaf.2.gif" alt=""></span>
+              </div>
+
+              <div class="flex items-center">
+                <div>
+                  <p class="text-sm text-slate-200 mb-2">
+                    Hi leafffuuudiiii It's almost little bit more than 2 years we have know each other and You are more
+                    than just a friend to me.
+                    My partner in crime and my forever eternal duo for everything.
+                  </p>
+
+                  <p class="text-sm text-cyan-200/80">
+                    <i><b>
+                        ~If I could save time in a Bottle<br>
+                        The First thing that I'd like to do<br>
+                        Is to save every day 'til eternity passes away<br>
+                        Just to spend them with you~
+                      </b></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Spidy -->
+        <div class="accordion-item rounded-lg border border-cyan-300/30 bg-slate-800/60 overflow-hidden">
+          <button
+            class="accordion-header w-full flex items-center justify-between p-2 px-3 text-left hover:bg-slate-700/50 transition-colors"
+            onclick="toggleAccordion(this)">
+            <span class="text-base font-bold text-cyan-200">Spidy</span>
+            <svg class="accordion-icon w-4 h-4 text-cyan-300 transition-transform duration-300" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="accordion-content">
+            <div class="grid grid-cols-1 md:grid-cols-[370px_1fr] pb-3 pt-5">
+              <div style="height:300px;width:300px"
+                class="ml-10 rounded-lg bg-gradient-to-br from-red-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-300/30">
+                <span class="text-2xl"><img style=" width: 280px;" src="leaf.3.gif" alt=""></span>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm text-slate-200">
+                  Happyyyy Birthdayyyy Leafyyyy (ek patti, ek jeevan 🌿)<br>
+
+                  Main tumhe kaafi time se jaanta hoon, aur aaj honestly bolna chahta hoon ki main tumhari aur tumhari
+                  dosti ke liye bohot grateful hoon. Mujhe sach mein bohot khushi hai ki mujhe tum Twitch par miliii.
+                  Aur obviously, thank youuu mujhe apni itni wholesome community mein welcome karne ke liye.<br>
+
+                  Main dil se wish karta hoon ki tumhare saare sapne poore ho jaayein aur tum hamesha aise hi khushhhh
+                  raho. Aur tension mat looo, ek din pakka mast unlimited food dishes banaunga, jo jo tumhe pasand hai
+                  sab kuchhh 😌✨<br>
+
+                  Tum hamesha aisi hi fantastic, fabulous, awesome aur blossom insaan raho.
+                  Have an outstanding dayyyy, Leafyyyy <33 ❤️❤️❤️<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Sid -->
+        <div class="accordion-item rounded-lg border border-cyan-300/30 bg-slate-800/60 overflow-hidden">
+          <button
+            class="accordion-header w-full flex items-center justify-between p-2 px-3 text-left hover:bg-slate-700/50 transition-colors"
+            onclick="toggleAccordion(this)">
+            <span class="text-base font-bold text-cyan-200">Sid</span>
+            <svg class="accordion-icon w-4 h-4 text-cyan-300 transition-transform duration-300" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="accordion-content">
+            <div class="grid grid-cols-1 md:grid-cols-[380px_1fr] pb-3 pt-5">
+              <div style="height:300px;width:300px"
+                class="ml-10 rounded-lg bg-gradient-to-br from-yellow-500/20 to-orange-500/20 flex items-center justify-center border border-cyan-300/30">
+                <span class="text-2xl"><img style="width:320px;" src="leaf.4.gif" alt=""></span>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm text-slate-200">
+                  Appyy bday leaf , may your all wish come true 🤗, stay hydrated , wish you the best life ahead 🥳 I
+                  just hope we all stay together as always ...until that day, till All are one !!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Yaan -->
+        <div class="accordion-item rounded-lg border border-cyan-300/30 bg-slate-800/60 overflow-hidden">
+          <button
+            class="accordion-header w-full flex items-center justify-between p-2 px-3 text-left hover:bg-slate-700/50 transition-colors"
+            onclick="toggleAccordion(this)">
+            <span class="text-base font-bold text-cyan-200">Yaan</span>
+            <svg class="accordion-icon w-4 h-4 text-cyan-300 transition-transform duration-300" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="accordion-content">
+            <div class="grid grid-cols-1 md:grid-cols-[380px_1fr] pb-3 pt-5">
+              <div style="height:300px;width:300px"
+                class="ml-10 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-500/20 flex items-center justify-center border border-cyan-300/30">
+                <span class="text-2xl"><img style="width:320px;" src="leaf.5.gif" alt=""></span>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm text-slate-200">
+                  Happy birthday, Leaf! 🎉🌿 I just wanted to say how much you genuinely mean to me. <br>Gaming with you
+                  is
+                  always one of the best parts of my day whether we’re winning,<br> losing, or just laughing at the most
+                  random things. 🎮✨ You bring such a fun, comforting energy that makes every match and every
+                  conversation special.<br> I’m really grateful for our friendship and all the memories we’ve made
+                  together
+                  in <br>game. Here’s to many more games, laughs, and late-night sessions ahead. Happy Birthday again!
+                  🎂💚
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Dev -->
+        <div class="accordion-item rounded-lg border border-cyan-300/30 bg-slate-800/60 overflow-hidden">
+          <button
+            class="accordion-header w-full flex items-center justify-between p-2 px-3 text-left hover:bg-slate-700/50 transition-colors"
+            onclick="toggleAccordion(this)">
+            <span class="text-base font-bold text-cyan-200">Dev</span>
+            <svg class="accordion-icon w-4 h-4 text-cyan-300 transition-transform duration-300" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div class="accordion-content">
+            <div class="grid grid-cols-1 md:grid-cols-[380px_1fr] pb-3 pt-5">
+              <div style="height:300px;width:300px"
+                class="ml-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center border border-cyan-300/30">
+                <span class="text-2xl"><img src="leaf.6.gif" alt=""></span>
+              </div>
+
+              <div class="flex items-center">
+                <p class="text-sm text-slate-200">🎂 Coming soon... 🎂</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="mt-5 border-t border-cyan-300/25 pt-3 text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.16em] text-cyan-200/90">End Of Party Drop</p>
+        <p class="mt-1 text-xs text-slate-300">Leaf, keep shining. Your squad is always with you.</p>
+        <p class="mt-1 text-xs text-slate-400">Made with love by Zui, Guri, Spidy, Dev, Sid and Yaan.</p>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    function toggleAccordion(button) {
+      const item = button.parentElement;
+      const content = item.querySelector('.accordion-content');
+      const icon = item.querySelector('.accordion-icon');
+
+      // Toggle smooth transition
+      content.classList.toggle('open');
+      icon.classList.toggle('rotate-180');
+    }
+  </script>
+</body>
+
+</html>
